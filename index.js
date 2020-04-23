@@ -12,20 +12,38 @@ import { fifaData } from './fifa.js';
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
-// a
-console.log("Task 1A: ", fifaData.filter(data =>
-    data.Year === 2014 && data.Stage === 'Final' ?
-        data['Home Team Name'] :
-        false
-))
+// // a
+// console.log("Task 1A: ", fifaData.filter(data =>
+//     data.Year === 2014 && data.Stage === 'Final' ?
+//         data['Home Team Name'] :
+//         false
+// ))
 
-// b
-console.log("Task 1B: ", fifaData.filter(data =>
-    data.Year === 2014 && data.Stage === 'Final' ?
-        data['Away Team Name'] :
-        false
-))
+// // b
+// console.log("Task 1B: ", fifaData.filter(data =>
+//     data.Year === 2014 && data.Stage === 'Final' ?
+//         data['Away Team Name'] :
+//         false
+// ))
 
+const finals2014 = fifaData.filter(item =>
+    item.Year === 2014 && item.Stage === "Final"
+)
+
+//(a) Home Team name for 2014 world cup final
+console.log("Task 1a:", finals2014[0]['Home Team Name'])
+
+//(b) Away Team name for 2014 world cup final
+console.log("Task 1b:", finals2014[0]['Away Team Name'])
+
+//(c) Home Team goals for 2014 world cup final
+console.log("Task 1c:", finals2014[0]['Home Team Goals'])
+
+//(d) Away Team goals for 2014 world cup final
+console.log("Task 1d:", finals2014[0]['Away Team Goals'])
+
+//(e) Winner of 2014 world cup final
+console.log("Task 1e:", finals2014[0]['Win conditions'])
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
